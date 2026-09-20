@@ -1,0 +1,42 @@
+.logo {
+    float: left;
+    margin-right: 20px;
+    border: 1px solid aliceblue;
+}
+header{
+    width: 100%;
+    padding: 10px;
+    background-color: aliceblue;
+}
+nav{
+    max-width: 960px;
+    margin: 0 auto;
+    color: rgb(2, 137, 255);
+}
+main{
+    max-width: 960px;
+    margin: 0 auto;
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+tr:nth-child(even){
+    background-color: aliceblue;
+}
+tr:nth-child(odd){
+    background-color: white;
+}
+th{
+    background-color: rgb(200, 229, 255);
+}
+section{
+    padding: 10px;
+}
+footer{
+    width: 100%;
+    background-color: rgb(227, 240, 252);
+    color: black;
+    padding: 5px;
+}
