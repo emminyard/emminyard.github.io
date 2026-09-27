@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header, nav, main, footer{width: 100%;}
+.logo{
+    display: block;
+    text-align: center;
+}
+header{
+    background-color: aliceblue;
+    padding: 10px;
+    border: 1px solid rgb(233, 233, 233);
+}
+nav{
+    display: flex;
+    flex-direction: column;
+}
+nav a{
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(59, 113, 160);
+    border-bottom: 1px solid rgb(200, 218, 233);
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+#links{order: 2;}
+#table{order: 1;}
+#form{order: 3;}
+section{
+    padding: 20px;
+    margin: 20px 0;
+    background-color: rgb(249, 252, 255);
+    border: 1px solid rgb(200, 218, 233);
+    border-radius: 10px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+tr:nth-child(even){background-color: aliceblue;}
+tr:nth-child(odd){background-color: white;}
+th{background-color: rgb(200, 229, 255);}
+footer{
+    width: 100%;
+    background-color: rgb(227, 240, 252);
+    color: black;
+    padding: 5px;
+}
+a{color: rgb(59, 113, 160)}
+form div {
+    margin-bottom: 10px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input, textarea, select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+@media(min-width: 768px){
+    .logo{
+        float: left;
+        margin-right: 20px;
+        text-align: left;
+        padding: 0;
+    }
+    main {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    nav {
+        flex-direction: row;
+    }
+
+    nav a {
+        border-bottom: none;
+        margin-right: 20px;
+    }
+    #links, #table, #form {
+        order: 0;}
+    header::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
