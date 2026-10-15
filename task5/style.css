@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #2c0066;;
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #2c0066;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form div {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2c0066;;
+}
+
+input, select {
+    padding: 8px 12px;
+    border: 1px solid #2c00664a;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 25px;
+    background-color: #2c0066;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color:#2c0066;
+}
+
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c0066;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#result.error {
+    color: #c00;
+}
+input, select {
+    border: 1px solid #2c0066;
+    color: #2c0066;
+    caret-color: #2c0066;
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: #2c0066;
+}
+select:hover {
+    border-color: #2c0066;
+}
