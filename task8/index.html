@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
 
+    <main class="page-content">
+        <h1>Задание 8</h1>
+        <p>Нажмите на кнопку, чтобы открыть форму обратной связи.</p>
+        <button type="button" id="open-form-btn" class="btn-primary">Связаться с нами</button>
+    </main>
+
+    <!-- Попап с формой -->
+    <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+            <button type="button" class="popup-close" id="close-form-btn" aria-label="Закрыть">&times;</button>
+            
+            <h2>Форма обратной связи</h2>
+            
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="fio">ФИО *</label>
+                    <input type="text" id="fio" name="fio" required placeholder="Иванов Иван Иванович" 
+                           pattern="[А-Яа-яЁё\s\-]+" title="Только русские буквы, пробелы и дефисы">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 123-45-67" 
+                           pattern="(?=(?:\D*\d){10,})[0-9\+\s\-\(\)]+" 
+                           title="Введите телефон с минимум 10 цифрами (можно +, скобки, пробелы, дефисы)">
+                </div>
+
+                <div class="form-group">
+                    <label for="organization">Организация</label>
+                    <input type="text" id="organization" name="organization" placeholder="ООО Ромашка" 
+                           pattern="[А-Яа-яЁёA-Za-z0-9\s\-\.,\x22]+" title="Только буквы, цифры и базовые знаки">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Сообщение *</label>
+                    <textarea id="message" name="message" rows="3" required placeholder="Ваше сообщение..." minlength="10"></textarea>
+                </div>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">Я согласен с политикой обработки персональных данных *</label>
+                </div>
+
+                <div id="form-status" class="form-status"></div>
+
+                <button type="submit" id="submit-btn" class="btn-primary">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
