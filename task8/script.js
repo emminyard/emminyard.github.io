@@ -6,12 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
     const statusDiv = document.getElementById("form-status");
     const submitBtn = document.getElementById("submit-btn");
-
-    // ВАЖНО: Замени этот URL на свой endpoint с formcarry.com
-    const FORMCARRY_ENDPOINT = "https://formcarry.com/s/ВАШ_ID";
+    const FORMCARRY_ENDPOINT = "https://formcarry.com/s/y8rKOAlAsOu";
     const STORAGE_KEY = "contact_form_data";
-
-    // --- 1. Валидация ввода ---
     const fioInput = document.getElementById("fio");
     const phoneInput = document.getElementById("phone");
     const orgInput = document.getElementById("organization");
