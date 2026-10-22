@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #660042;
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px #660042;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 350px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type="number"], select {
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+    text-align: center;
+}
+
+input[type="number"]:focus, select:focus {
+    outline: none;
+    border-color: #271118;
+    box-shadow: 0 0 0 3px #660042;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#total-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #660042;
+    margin-top: 30px;
+    text-align: center;
+}
+/* --- Цвет выбора для радиокнопок и чекбоксов --- */
+
+/* Выбранная радиокнопка или чекбокс */
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    accent-color: #660042;
+}
+
+/* Обводка при наведении и фокусе */
+input[type="radio"]:hover,
+input[type="checkbox"]:hover,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline-color: #660042;
+    box-shadow: 0 0 0 3px rgba(102, 0, 66, 0.2);
+}

@@ -1,1 +1,66 @@
-
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор услуги</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Калькулятор стоимости услуги</h1>
+    
+    <form id="calc-form">
+        
+        <!-- Количество -->
+        <div class="form-group">
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" step="1">
+        </div>
+        
+        <!-- Тип товара (радиокнопки) -->
+        <div class="form-group">
+            <p>Тип услуги:</p>
+            <label>
+                <input type="radio" name="productType" value="1" checked> 
+                Услуга 1 (базовая, 100 ₽)
+            </label>
+            <label>
+                <input type="radio" name="productType" value="2"> 
+                Услуга 2 (с опциями, 200 ₽)
+            </label>
+            <label>
+                <input type="radio" name="productType" value="3"> 
+                Услуга 3 (со свойствами, 150 ₽)
+            </label>
+        </div>
+        
+        <!-- Опции (селект) — только для типа 2 -->
+        <div class="form-group" id="options-block">
+            <label for="productOption">Дополнительная опция:</label>
+            <select id="productOption" name="productOption">
+                <option value="0">Без опции (+0 ₽)</option>
+                <option value="20">Опция A (+20 ₽)</option>
+                <option value="50">Опция B (+50 ₽)</option>
+            </select>
+        </div>
+        
+        <!-- Свойства (чекбоксы) — только для типа 3 -->
+        <div class="form-group" id="properties-block">
+            <p>Дополнительные свойства:</p>
+            <label>
+                <input type="checkbox" name="property" value="10"> 
+                Свойство 1 (+10 ₽)
+            </label>
+            <label>
+                <input type="checkbox" name="property" value="30"> 
+                Свойство 2 (+30 ₽)
+            </label>
+        </div>
+        
+    </form>
+    
+    <!-- Результат -->
+    <p id="total-price">Стоимость: 0 ₽</p>
+</body>
+</html>
